@@ -35,3 +35,13 @@ html,body,.container {
 	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 }
+
+.right-disappear {
+  -webkit-transform: rotate(360deg);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}

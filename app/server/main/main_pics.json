@@ -14,8 +14,8 @@
     "project": "project1",
     "position": "right",
     "imageUrl": "/images/main/yili_green.png",
-    "title": "Blue",
-    "description": "This is blue"
+    "title": "Green",
+    "description": "This is green"
   },
   {
     "id": 3,
@@ -23,8 +23,8 @@
     "project": "project2",
     "position": "left",
     "imageUrl": "/images/main/yili_lightBlue.png",
-    "title": "Blue",
-    "description": "This is blue"
+    "title": "Light Blue",
+    "description": "This is light blue"
   },
   {
     "id": 4,
@@ -32,7 +32,7 @@
     "project": "project2",
     "position": "right",
     "imageUrl": "/images/main/yili_orange.png",
-    "title": "Blue",
-    "description": "This is blue"
+    "title": "Orange",
+    "description": "This is orange"
   }
 ]
