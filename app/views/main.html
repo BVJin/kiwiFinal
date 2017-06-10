@@ -21,12 +21,13 @@
 
 
 <div class="row yili-row">
-  <!-- <div ng-repeat="pic in bgpics | filter: {position : 'left'} : true" class="col-md-6" style="height:100%">
-    <div left-mainpic class="col-md-6 full-stretch clipbox" pic-src="pic">
-  </div> -->
-    <!-- <div class="col-md-6 no-float">Content</div> -->
-    <div class="col-md-6 full-stretch" left-mainpic ng-animate-swap="curLeftPic"  ng-style="{'background-image': 'url(' + curLeftPic.imageUrl + ')'}">
-    </div>
-    <div class="col-md-6 full-stretch" ng-animate-swap="curRightPic" class="cell swap-animation" ng-style="{'background-image': 'url(' + curRightPic.imageUrl + ')'}">
+    <!-- <div ng-repeat="pic in bgpics | filter: {position : 'left'} : true" class="col-md-6" style="height:100%">
+      <div left-mainpic class="col-md-6 full-stretch clipbox" pic-src="pic">
+    </div> -->
+    <div ng-repeat="proj in bgpics"  style="height:100%">
+      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'left-' + proj.left.projectId }}" projData="proj" ng-style="getStyle(proj, 'left')">
+      </div>
+      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'right-' + proj.left.projectId }}" projData="proj" ng-style="getStyle(proj, 'right')">
+      </div>
     </div>
 </div>
