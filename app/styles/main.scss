@@ -17,6 +17,12 @@ html,body,.container {
   display: table-row;
 }
 
+.pro-container {
+  height:100%;
+  width: 100%;
+  position: absolute
+}
+
 .full-stretch {
   height: 100%;
 }
@@ -26,9 +32,11 @@ html,body,.container {
   float: none;
 }
 
+.show-image {
+  opacity: 0;
+};
+
 .left-disappear {
-  -webkit-transform: rotate(360deg);
-  border-radius: 50%;
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
@@ -37,8 +45,6 @@ html,body,.container {
 }
 
 .right-disappear {
-  -webkit-transform: rotate(360deg);
-  border-radius: 50%;
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;

@@ -24,10 +24,12 @@
     <!-- <div ng-repeat="pic in bgpics | filter: {position : 'left'} : true" class="col-md-6" style="height:100%">
       <div left-mainpic class="col-md-6 full-stretch clipbox" pic-src="pic">
     </div> -->
-    <div ng-repeat="proj in bgpics"  style="height:100%">
-      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'left-' + proj.left.projectId }}" projData="proj" ng-style="getStyle(proj, 'left')">
+    <div ng-repeat="proj in bgpics" class="pro-container" ng-style=" { 'z-index' : -proj.left.projectId } ">
+      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'left-' + proj.left.projectId }}" ng-style="getStyle(proj, 'left')">
+        <h2> {{proj.left.projectId}} </h2>
       </div>
-      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'right-' + proj.left.projectId }}" projData="proj" ng-style="getStyle(proj, 'right')">
+      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'right-' + proj.left.projectId }}" ng-style="getStyle(proj, 'right')">
+        <h2> {{proj.left.projectId}} </h2>
       </div>
     </div>
 </div>
