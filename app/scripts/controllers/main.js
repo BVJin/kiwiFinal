@@ -8,16 +8,55 @@
  * Controller of the yiliApp
  */
 angular.module('yiliApp')
-  .controller('MainCtrl', ['$scope', '$interval', '$window', '$timeout', 'yiliSvcs', function ( $scope, $interval, $window, $timeout, svcs ) {
 
-    // $scope.curLeftPic = null
-    // $scope.curRightPic = null;
+  .controller('MainCtrl', ['$scope', '$interval', '$window', '$timeout', 'yiliSvcs', 'preloader', function ( $scope, $interval, $window, $timeout, svcs, preloader ) {
+
+    var loading_screen = pleaseWait({
+      logo: "/images/main/yili_blue.jpg",
+      backgroundColor: '#f46d3b',
+      loadingHtml:"<div class='spinner-text'><h2>YILI SUN</h2></div>"
+      + "<div class='sk-spinner sk-spinner-double-bounce'><div class='sk-double-bounce1'></div><div class='sk-double-bounce2'></div></div>"
+    });
+
+
+
+    //loading_screen.finish();
     $scope.curIndex = 1;
     $scope.bgpics = [];
+    //center dial
+    var perProjPercentage = null;
+    $scope.progressBarConfig = {
+      offset : 180,
+      thickness : 5,
+      size : 200,
+      curPercentage : 0
+    };
 
     svcs.getMainImges()
     .then(function(data){
       $scope.bgpics = angular.copy(data);
+      // center dial
+      perProjPercentage = $scope.bgpics.length > 1 ? 100 / ($scope.bgpics.length-1) : 100 ;
+
+      // pre load all the images
+      var images = [];
+      angular.forEach($scope.bgpics, function(proj){
+        images.push(proj.left.imageUrl);
+        images.push(proj.right.imageUrl);
+      });
+
+      preloader.preloadImages( images )
+      .then(function() {
+          loading_screen.finish();
+          $scope.isImageLoaded = true;
+      },
+      function( err ) {
+          console.log(err);
+      }, function(event){
+        $scope.percentLoaded = event.percent;
+        console.log($scope.percentLoaded );
+      });
+
     })
     .catch(function(err) { console.log(err); });
 
@@ -49,9 +88,9 @@ angular.module('yiliApp')
         disappearDown(curRightElement, 'right');
 
         $scope.curIndex++;
-
         $scope.curIndex = $scope.curIndex == $scope.bgpics.length + 1 ? 1 : $scope.curIndex;
 
+        $scope.progressBarConfig.curPercentage = ($scope.curIndex-1) * perProjPercentage;
         // set next index proj image opacity as 1
         setImageAppear($scope.curIndex);
 
@@ -100,6 +139,7 @@ angular.module('yiliApp')
       nextLeftElement.css('opacity', 1);
       nextRightElement.css('opacity', 1)
     };
+
 
 
     // $interval(function() {

@@ -9,6 +9,9 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/please-wait/build/please-wait.css" />
+    <link rel="stylesheet" href="bower_components/SpinKit/css/spinkit.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -21,9 +24,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-
     <div class="container">
     <div ng-view="" class="container"></div>
+
     </div>
 
     <!-- <div class="footer">
@@ -55,6 +58,10 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/please-wait/build/please-wait.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -62,8 +69,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/yilisvcs.js"></script>
-        <script src="scripts/directives/leftmainpic.js"></script>
-        <script src="scripts/directives/rightmainpic.js"></script>
+        <script src="scripts/directives/progressCircle.js"></script>
+        <script src="scripts/services/preLoader.service.js"></script>
         <!-- endbuild -->
 </body>
 </html>
