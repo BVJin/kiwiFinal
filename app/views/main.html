@@ -4,30 +4,28 @@
   accordingly. In the image, set a certain block for the to link to the
   project detail page
 -->
-<!--<div class="yili-container row">
 
-   <div ng-repeat="pic in bgpics | filter: {position : 'left'} : true" class="col-md-6" style="height:100%">
-    <div left-mainpic class="col-md-6" pic-src="pic">
-    </div>
-  </div>
-  <div ng-repeat="pic in bgpics | filter: {position : 'right'} : true" class="col-md-6">
-    <div right-mainpic class="col-md-6" pic-src="{{pic}}">
-    </div>
-  </div>
-       <div class="col-md-3 no-float">Navigation</div>
-       <div class="col-md-9 no-float">Content</div>
+<div class="row yili-row" ng-show="isImageLoaded">
 
-</div>-->
-
-
-<div class="row yili-row">
-    <!-- <div ng-repeat="pic in bgpics | filter: {position : 'left'} : true" class="col-md-6" style="height:100%">
-      <div left-mainpic class="col-md-6 full-stretch clipbox" pic-src="pic">
-    </div> -->
-    <div ng-repeat="proj in bgpics"  style="height:100%">
-      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'left-' + proj.left.projectId }}" projData="proj" ng-style="getStyle(proj, 'left')">
+    <div class="yili-logo">
+      <div>
+        <progress-circle ng-model="progressBarConfig.curPercentage" size="progressBarConfig.size" min="0" max="100" thickness="progressBarConfig.thickness" offset="progressBarConfig.offset">
+        </progress-circle>
       </div>
-      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'right-' + proj.left.projectId }}" projData="proj" ng-style="getStyle(proj, 'right')">
+    </div>
+
+    <div ng-repeat="proj in bgpics" class="pro-container" ng-style=" { 'z-index' : -proj.left.projectId } ">
+      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'left-' + proj.left.projectId }}" ng-style="getStyle(proj, 'left')">
+        <h2> {{proj.left.projectId}} </h2>
+        <!-- <div class="yili-decr-left">
+          {{proj.left.description}}
+        </div> -->
+      </div>
+      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'right-' + proj.left.projectId }}" ng-style="getStyle(proj, 'right')">
+        <h2> {{proj.left.projectId}} </h2>
+        <div class="yili-decr-right">
+          {{proj.right.description}}
+        </div>
       </div>
     </div>
 </div>

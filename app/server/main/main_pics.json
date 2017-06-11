@@ -4,7 +4,7 @@
     "projectId": 1,
     "project": "project1",
     "position": "left",
-    "imageUrl": "/images/main/yili_blue.png",
+    "imageUrl": "/images/main/Project1-Daily-News-Cover-Mockup-little.jpg",
     "title": "Blue",
     "description": "This is blue"
   },
@@ -13,7 +13,7 @@
     "projectId": 1,
     "project": "project1",
     "position": "right",
-    "imageUrl": "/images/main/yili_green.png",
+    "imageUrl": "/images/main/Project1-bg.jpg",
     "title": "Green",
     "description": "This is green"
   },
@@ -22,7 +22,7 @@
     "projectId": 2,
     "project": "project2",
     "position": "left",
-    "imageUrl": "/images/main/yili_lightBlue.png",
+    "imageUrl": "/images/main/Project2-3-Produit.jpg",
     "title": "Light Blue",
     "description": "This is light blue"
   },
@@ -31,7 +31,79 @@
     "projectId": 2,
     "project": "project2",
     "position": "right",
-    "imageUrl": "/images/main/yili_orange.png",
+    "imageUrl": "/images/main/Project2-bg.jpg",
+    "title": "Orange",
+    "description": "This is orange"
+  },
+  {
+    "id": 5,
+    "projectId": 3,
+    "project": "project3",
+    "position": "left",
+    "imageUrl": "/images/main/Project3-Affiche.jpg",
+    "title": "Light Blue",
+    "description": "This is light blue"
+  },
+  {
+    "id": 6,
+    "projectId": 3,
+    "project": "project3",
+    "position": "right",
+    "imageUrl": "/images/main/Project3-bg.jpg",
+    "title": "Orange",
+    "description": "This is orange"
+  },
+  {
+    "id": 7,
+    "projectId": 4,
+    "project": "project4",
+    "position": "left",
+    "imageUrl": "/images/main/Project4-app.jpg",
+    "title": "Light Blue",
+    "description": "This is light blue"
+  },
+  {
+    "id": 8,
+    "projectId": 4,
+    "project": "project4",
+    "position": "right",
+    "imageUrl": "/images/main/Project4-bg.jpg",
+    "title": "Orange",
+    "description": "This is orange"
+  },
+  {
+    "id": 9,
+    "projectId": 5,
+    "project": "project5",
+    "position": "left",
+    "imageUrl": "/images/main/Project5-A4-paper-vol.jpg",
+    "title": "Light Blue",
+    "description": "This is light blue"
+  },
+  {
+    "id": 10,
+    "projectId": 5,
+    "project": "project5",
+    "position": "right",
+    "imageUrl": "/images/main/Project5-bg.jpg",
+    "title": "Orange",
+    "description": "This is orange"
+  },
+  {
+    "id": 11,
+    "projectId": 6,
+    "project": "project6",
+    "position": "left",
+    "imageUrl": "/images/main/Project6-STERO.jpg",
+    "title": "Light Blue",
+    "description": "This is light blue"
+  },
+  {
+    "id": 12,
+    "projectId": 6,
+    "project": "project6",
+    "position": "right",
+    "imageUrl": "/images/main/Project6-bg.jpg",
     "title": "Orange",
     "description": "This is orange"
   }

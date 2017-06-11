@@ -12,13 +12,59 @@ html,body,.container {
   padding-right: 0px;
 }
 
+// .container > .yili-row {
+//   display: none;
+// }
+//
+// .container.pg-loaded > .yili-row {
+//   display: block;
+// }
+
 .yili-row {
   height: 100%;
   display: table-row;
 }
 
+
+
+.yili-logo {
+  width: 200px;
+  height: 200px;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto
+}
+
+.yili-decr-left {
+  width: 50%;
+  height: 100px;
+  margin-top: 70%;
+  margin-left: 15%;
+  background: white;
+}
+
+.yili-decr-right {
+  width: 80%;
+  height: 150px;
+  margin-top: 65%;
+  margin-left: 5%;
+  background: white;
+}
+
+.pro-container {
+  height:100%;
+  width: 100%;
+  position: absolute
+}
+
 .full-stretch {
   height: 100%;
+  background-size: cover;
 }
 
 .row .no-float {
@@ -26,9 +72,11 @@ html,body,.container {
   float: none;
 }
 
+.show-image {
+  opacity: 0;
+};
+
 .left-disappear {
-  -webkit-transform: rotate(360deg);
-  border-radius: 50%;
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
@@ -37,11 +85,74 @@ html,body,.container {
 }
 
 .right-disappear {
-  -webkit-transform: rotate(360deg);
-  border-radius: 50%;
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
 	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 }
+
+
+
+.progress-circle {
+    fill: gray;
+    opacity: 1;
+}
+
+path {
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  -webkit-transition: stroke-dashoffset 1s ease-in;
+  transition: stroke-dashoffset 1s ease-in;
+  fill: transparent;
+}
+
+
+
+// loading spinner
+.spinner-text {
+  h2 {
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+  }
+}
+.sk-spinner-double-bounce.sk-spinner {
+  top: 40px;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 0 auto; }
+.sk-spinner-double-bounce .sk-double-bounce1, .sk-spinner-double-bounce .sk-double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #FFF;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
+          animation: sk-doubleBounce 2s infinite ease-in-out; }
+.sk-spinner-double-bounce .sk-double-bounce2 {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s; }
+
+@-webkit-keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
