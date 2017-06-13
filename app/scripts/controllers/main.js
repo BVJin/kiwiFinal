@@ -9,7 +9,7 @@
  */
 angular.module('yiliApp')
 
-  .controller('MainCtrl', ['$scope', '$interval', '$window', '$timeout', 'yiliSvcs', 'preloader', function ( $scope, $interval, $window, $timeout, svcs, preloader ) {
+  .controller('MainCtrl', ['$scope', '$interval', '$window', '$timeout', 'yiliSvcs', 'preloader', '$location', function ( $scope, $interval, $window, $timeout, svcs, preloader, $location ) {
 
     var loading_screen = pleaseWait({
       logo: "/images/main/yili_blue.jpg",
@@ -65,6 +65,10 @@ angular.module('yiliApp')
         return {
           'background-image' : "url(" + proj[pos].imageUrl + ")"
         }
+    };
+
+    $scope.goDetails = function goDetails( path ) {
+      $location.path( '/' + path );
     };
 
     //detect the mouse event
@@ -139,6 +143,8 @@ angular.module('yiliApp')
       nextLeftElement.css('opacity', 1);
       nextRightElement.css('opacity', 1)
     };
+
+
 
 
 

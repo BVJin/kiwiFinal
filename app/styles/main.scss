@@ -1,7 +1,7 @@
 html,body,.container {
   margin: 0;
   height: 100%;
-  overflow: hidden
+
 }
 
 .container {
@@ -10,6 +10,7 @@ html,body,.container {
   box-sizing: border-box;
   padding-left: 0px;
   padding-right: 0px;
+  overflow: hidden;
 }
 
 // .container > .yili-row {
@@ -45,15 +46,35 @@ html,body,.container {
   height: 100px;
   margin-top: 70%;
   margin-left: 15%;
-  background: white;
 }
 
 .yili-decr-right {
+  font-weight: bold;
+  color: white;
   width: 80%;
   height: 150px;
   margin-top: 65%;
-  margin-left: 5%;
-  background: white;
+  margin-left: 15%;
+
+  .decri-title {
+    font-size: 3em;
+  }
+
+  .decri-content {
+    font-size: 2.5em;
+  }
+
+  .decri-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 40px;
+    font-size: 1em;
+    margin-top: 20px;
+    span {
+      top: 9px
+    }
+  }
 }
 
 .pro-container {

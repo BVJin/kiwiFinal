@@ -1,0 +1,59 @@
+.detail-container {
+  overflow: scroll !important;
+
+  .description {
+    min-height: 500px;
+    width: 100%;
+  }
+
+  .dyna-bg {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .two-img {
+    width: 70%;
+    height: 600px;
+    margin: auto;
+    .row {
+      div {
+        padding: 20px;
+        height: 600px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .one-img {
+    width: 70%;
+    height: 600px;
+    margin: auto;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .main-pics {
+    height: 600px;
+    margin-top: 20px;
+    .row {
+      div {
+        height: 600px;
+        padding-left: 0px;
+        padding-right: 0px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}
