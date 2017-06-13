@@ -16,15 +16,15 @@
 
     <div ng-repeat="proj in bgpics" class="pro-container" ng-style=" { 'z-index' : -proj.left.projectId } ">
       <div class="col-md-6 full-stretch" ng-attr-id="{{ 'left-' + proj.left.projectId }}" ng-style="getStyle(proj, 'left')">
-        <h2> {{proj.left.projectId}} </h2>
         <!-- <div class="yili-decr-left">
           {{proj.left.description}}
         </div> -->
       </div>
-      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'right-' + proj.left.projectId }}" ng-style="getStyle(proj, 'right')">
-        <h2> {{proj.left.projectId}} </h2>
-        <div class="yili-decr-right">
-          {{proj.right.description}}
+      <div class="col-md-6 full-stretch" ng-attr-id="{{ 'right-' + proj.right.projectId }}" ng-style="getStyle(proj, 'right')">
+        <div class="yili-decr-right" ng-click="goDetails(proj.right.href)">
+          <div class="decri-title">{{proj.right.title}}</div>
+          <div class="decri-content">{{proj.right.description}}</div>
+          <div class="decri-icon text-center"><span class="glyphicon glyphicon-menu-right"></span></div>
         </div>
       </div>
     </div>

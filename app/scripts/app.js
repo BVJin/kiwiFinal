@@ -24,6 +24,9 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/Daily-News-Cover', {
+        templateUrl: 'views/Daily-News-Cover.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
